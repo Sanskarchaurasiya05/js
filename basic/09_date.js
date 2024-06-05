@@ -43,6 +43,6 @@ newDate.toLocaleString('default',{
       weekday: "long",
        
 })
-
+console.log("hello sanskar");
 
 
