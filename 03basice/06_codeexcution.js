@@ -29,8 +29,31 @@ let result2 = addnum(10,2)
     // 3.Execution phase===> execute for addnum
         // val1==>10
         // val2===>4
-        // addnum==>create a different excution context
+        // addnum==>create a different excution context  //once a work completed it's deleted
                     //  a.new varaible enviorment + excution thread
-                                
+              // for a. memory phase==>val1=undefined , val2=undefined , total=undefined 
+            //   execution context==> num1=10 , num2=5 , total=15
+            // return total into global execution context
+            
+        // ***********************************************************
+            
+            // Call Stack=========>>>>>>LIFO
 
+//   one()
+//    tow()           [globalexecution->one()->two()->three()]
+//    three()
 
+function one(){
+    console.log("one");
+    two()
+}
+function two(){
+    console.log("two");
+    three()
+}
+function three(){
+    console.log("three");
+}
+one()
+two()
+three()
