@@ -92,3 +92,95 @@ my.forEach( (item) => {
     console.log(item.language);
 })
 
+
+const codings = ["js" , "ruby" , "java" , "cpp"]
+
+// for each loop does not return value
+// const values=coding.forEach ((item) => {
+//     // console.log(item);
+//     return item
+// })
+
+// console.log(values);
+
+
+const mynums = [1,2,3,4,5,6,7,8,9,10]
+
+// filter operation
+
+// filter ke ander hume call back values milta hai 
+// let newnums = mynums.filter( (num) => num >4 )
+// console.log(newnums);
+
+
+// when we use curly brases / scope then hume return ka use krna hoga
+// const newnums = mynums.filter( (num) => {
+//    return num > 4
+// })
+// console.log(newnums)
+
+
+const newnums=[]
+mynums.forEach ( (num) => {
+    if(num > 4){
+        newnums.push(num)
+    }
+})
+// console.log(newnums)
+
+
+// **********************************************************************
+
+const mynumers = [1,2,3,4,5,6,7,8,9]
+
+// const newnum=mynumers.map( (num) => num+10)
+// console.log(newnum);
+
+
+// chaining
+const newNums = mynumers
+                 .map( (num) => num*10)
+                 .map((num) => num+1)
+                 .filter( (num) => num >=40)
+
+// console.log(newNums);
+
+// *******************************************************************
+
+// reduce method====> 
+
+    const myNums = [1,2,3]
+
+    // const mytotal = myNums.reduce( function (acc,currval){
+    //     console.log(`acc:${acc} and currval: ${currval}`);
+    //     return acc + currval
+    // },3)
+
+    // console.log(mytotal);
+
+
+    // arrow fxn
+
+//     const mytotal = myNums.reduce( (acc , curr)=> acc+curr ,0)
+
+//    console.log(mytotal)
+
+const shoppingCart = [
+    {
+        itemName: "js",
+        price:2999
+    },
+    {
+        itemName: "cpp",
+        price:3999
+    },
+    {
+        itemName: "java",
+        price:4999
+    },
+]
+
+const pricetopay= shoppingCart.reduce( (acc,item)=>acc + item.price , 0)
+
+console.log(pricetopay);
+
