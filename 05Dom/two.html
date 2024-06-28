@@ -14,4 +14,29 @@
         <div class="day">thursday</div>
     </div>
 </body>
+<script>
+    // parent me hamare pass kya value hai
+    const parent=document.querySelectorAll('.parent')
+    console.log(parent);
+    // parent ke snder kitne children hai
+          console.log(parent.children);
+          console.log(parent.children[1].innerHTML);  // we get html collection aur isse array me convrt krke loop lga sakte hai
+        //   for (let i = 0; i <parent.children.length; i++) { //parent .children hume html collection deta hai
+        //    console.log(parent.children[i].innerHTML);
+            
+        //   }
+        //   change the styling of the children
+          parent.children[1].style.color = "orange"
+        //   here we move from parent to child
+          console.log(parent.firstElementChild);
+          console.log(parent.lastElementChild);
+
+          const dayOne = document.querySelector('.day')
+        //   console.log(dayOne);
+        //   her we move from child to parent
+        // console.log(dayOne.parentElements);
+        // console.log(dayOne.nextElementSibling);
+
+        console.log("NODES: ",parent.childNodes);
+</script>
 </html>
